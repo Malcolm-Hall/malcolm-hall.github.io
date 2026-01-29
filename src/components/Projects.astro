@@ -5,7 +5,11 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 
 {
   hasProjects && (
-    <section id="projects" class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <section
+      id="projects"
+      class="p-8 sm:p-12 md:p-16 lg:p-24"
+      style={`--accent-color: ${siteConfig.accentColor}`}
+    >
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
@@ -18,71 +22,62 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
             />
           </div>
 
-          <div class="lg:col-span-8">
+          <ul class="lg:col-span-8">
             <div class="space-y-8">
-              {siteConfig.projects.map((project, index) => {
-                const Component = project.link ? "a" : "div";
-                const linkProps = project.link
+              {siteConfig.projects.map((project) => {
+                const linkProps = project.liveLink
                   ? {
-                      href: project.link,
+                      href: project.liveLink,
                       target: "_blank",
                       rel: "noopener noreferrer",
                     }
                   : {};
 
                 return (
-                  <div class="group relative">
-                    <Component
-                      {...linkProps}
-                      class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 ${
-                        project.link
-                          ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
-                          : ""
-                      }`}
-                    >
-                      {project.link && (
-                        <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
-                          <svg
-                            class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+                  <li
+                    class={`mb-12 block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1`}
+                  >
+                    <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
+                      <div class="z-10 sm:order-2 sm:col-span-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                          <a
+                            {...linkProps}
+                            class="inline-flex items-baseline hover:cursor-pointer hover:text-(--accent-color)"
                           >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 17L17 7M17 7H7M17 7V17"
-                            />
-                          </svg>
-                        </div>
-                      )}
-
-                      <div class="space-y-4">
-                        <div>
-                          <span
-                            class="text-sm font-mono"
-                            style={{ color: siteConfig.accentColor }}
-                          >
-                            0{index + 1}
-                          </span>
-                          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                            {project.name}
-                          </h3>
-                        </div>
-
+                            <span class="absolute rounded -inset-x-6 -inset-y-4 block" />
+                            <span>
+                              {project.name}
+                              <span class="inline-block">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                  class="inline-block h-4 w-4 shrink-0 transition-transform motion-reduce:transition-none ml-1 translate-y-px"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
                         <p
-                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
+                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.liveLink ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
                         >
                           {project.description}
                         </p>
-
                         {project.skills && project.skills.length > 0 && (
                           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
                             {project.skills.map((skill) => (
                               <span
                                 class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
-                                  project.link ? "group-hover:bg-gray-800" : ""
+                                  project.liveLink
+                                    ? "group-hover:bg-gray-800"
+                                    : ""
                                 }`}
                               >
                                 {skill}
@@ -91,12 +86,47 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           </div>
                         )}
                       </div>
-                    </Component>
-                  </div>
+                      <img
+                        loading="lazy"
+                        decoding="async"
+                        class="aspect-video w-full object-contain rounded border-2 border-slate-200/10 transition sm:order-1 sm:col-span-2 sm:translate-y-1"
+                        style="color:transparent"
+                        src={`/chess_starting_position.png`}
+                      />
+                      <a
+                        href={project.repoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                        class="transition-colors duration-300 hover:text-[var(--accent-color)] absolute top-0 right-0 z-50 flex gap-1 "
+                      >
+                        <span class="inline-block">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="h-4 w-4 inline-block"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 8l-4 4l4 4" />
+                            <path d="M17 8l4 4l-4 4" />
+                            <path d="M14 4l-4 16" />
+                          </svg>
+                          View Code
+                        </span>
+                      </a>
+                    </div>
+                  </li>
                 );
               })}
             </div>
-          </div>
+          </ul>
         </div>
       </div>
     </section>

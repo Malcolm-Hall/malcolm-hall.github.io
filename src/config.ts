@@ -7,15 +7,17 @@ export const siteConfig = {
     email: "malcolm.r.hall@outlook.com",
     linkedin: "https://www.linkedin.com/in/malcolm-hall-1b6761224",
     github: "https://github.com/Malcolm-Hall",
+    twitter: undefined,
   },
-  aboutMe: "[TODO] About me here",
+  aboutMe: "I’m a full-stack software developer with a strong foundation in problem solving and a pragmatic, delivery focused mindset. I hold a first class degree in Physics and Mathematics from Durham University, where programming became a core part of my work long before it became my career. For the past four years, I’ve worked professionally as a consultant developer, building and modernising enterprise web applications and APIs in financial services environments. I enjoy turning real business requirements into reliable, well-designed software.",
   skills: ["TypeScript", "React", "Angular", "Java", "Kotlin", "SpringBoot", "Node.js", "Python", "AWS", "Docker"],
   projects: [
     {
       name: "Chess",
       description:
-        "A playable game of chess which includes move validation and loading positions using standard FEN notation",
-      link: "https://github.com/Malcolm-Hall/chess",
+        "A playable game of chess with support for move validation and loading positions using standard FEN notation.",
+      liveLink: "https://github.com/Malcolm-Hall/chess",
+      repoLink: "https://github.com/Malcolm-Hall/chess",
       skills: ["Python", "Pyglet"],
     }
   ],
