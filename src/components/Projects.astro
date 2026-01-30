@@ -5,21 +5,14 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 
 {
   hasProjects && (
-    <section
-      id="projects"
-      class="p-8 sm:p-12 md:p-16 xl:p-24"
-      style={`--accent-color: ${siteConfig.accentColor}`}
-    >
+    <section id="projects" class="p-8 sm:p-12 md:p-16 xl:p-24">
       <div>
         <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-16 items-start">
           <div class="xl:col-span-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Projects
             </h2>
-            <div
-              class="w-[75px] h-[5px] mt-2 rounded-full"
-              style={`background-color: ${siteConfig.accentColor}`}
-            />
+            <div class="w-[75px] h-[5px] mt-2 rounded-full bg-[var(--accent-color)]" />
           </div>
 
           <ul class="xl:col-span-8">
