@@ -7,13 +7,13 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
   hasProjects && (
     <section
       id="projects"
-      class="p-8 sm:p-12 md:p-16 lg:p-24"
+      class="p-8 sm:p-12 md:p-16 xl:p-24"
       style={`--accent-color: ${siteConfig.accentColor}`}
     >
       <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-16 items-start">
+          <div class="xl:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Projects
             </h2>
             <div
@@ -22,7 +22,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
             />
           </div>
 
-          <ul class="lg:col-span-8">
+          <ul class="xl:col-span-8">
             <div class="space-y-8">
               {siteConfig.projects.map((project) => {
                 const linkProps = project.liveLink
@@ -73,13 +73,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                         {project.skills && project.skills.length > 0 && (
                           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
                             {project.skills.map((skill) => (
-                              <span
-                                class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
-                                  project.liveLink
-                                    ? "group-hover:bg-gray-800"
-                                    : ""
-                                }`}
-                              >
+                              <span class="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300">
                                 {skill}
                               </span>
                             ))}
@@ -89,7 +83,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       <img
                         loading="lazy"
                         decoding="async"
-                        class="aspect-video w-full object-contain rounded border-2 border-slate-200/10 transition sm:order-1 sm:col-span-2 sm:translate-y-1"
+                        class="aspect-video w-full h-full object-contain rounded border-2 border-slate-200/10 transition sm:order-1 sm:col-span-2 sm:translate-y-1"
                         style="color:transparent"
                         src={`/chess_starting_position.png`}
                       />
@@ -98,7 +92,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
-                        class="transition-colors duration-300 hover:text-[var(--accent-color)] absolute top-0 right-0 z-50 flex gap-1 "
+                        class="transition-colors duration-300 hover:text-[var(--accent-color)] absolute top-2 right-0 z-50 flex gap-1 "
                       >
                         <span class="inline-block">
                           <svg

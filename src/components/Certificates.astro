@@ -1,0 +1,86 @@
+---
+import { siteConfig } from "../config";
+const hasCertificates =
+  siteConfig.certificates && siteConfig.certificates.length > 0;
+---
+
+{
+  hasCertificates && (
+    <section id="certificates" class="p-8 sm:p-12 md:p-16 xl:p-24">
+      <div>
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-16 items-start">
+          <div class="xl:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+              Certificates
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="xl:col-span-8">
+            <div class="space-y-8">
+              {siteConfig.certificates.map((cert) => {
+                const linkProps = cert.link
+                  ? {
+                      href: cert.link,
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    }
+                  : {};
+                return (
+                  <a {...linkProps} class=" hover:cursor-pointer">
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+                      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                        <div>
+                          <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                            {cert.name}
+                            <span class="inline-block">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                class="inline-block h-4 w-4 shrink-0 transition-transform motion-reduce:transition-none ml-1 translate-y-px"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </h3>
+                          <p
+                            class="text-base sm:text-lg"
+                            style={`color: ${siteConfig.accentColor}`}
+                          >
+                            {cert.organisation}
+                          </p>
+                        </div>
+                        <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
+                          {cert.issueDate}
+                        </span>
+                      </div>
+
+                      {cert.skills && cert.skills.length > 0 && (
+                        <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4">
+                          {cert.skills.map((skill) => (
+                            <span class="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

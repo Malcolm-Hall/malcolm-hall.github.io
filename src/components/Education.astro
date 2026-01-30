@@ -5,11 +5,11 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
 {
   hasEducation && (
-    <section id="education" class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <section id="education" class="p-8 sm:p-12 md:p-16 xl:p-24">
       <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-16 items-start">
+          <div class="xl:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Education
             </h2>
             <div
@@ -18,7 +18,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             />
           </div>
 
-          <div class="lg:col-span-8">
+          <div class="xl:col-span-8">
             <div class="space-y-8">
               {siteConfig.education.map((edu) => (
                 <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
@@ -49,6 +49,16 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                       </li>
                     ))}
                   </ul>
+
+                  {edu.skills && edu.skills.length > 0 && (
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4">
+                      {edu.skills.map((skill) => (
+                        <span class="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

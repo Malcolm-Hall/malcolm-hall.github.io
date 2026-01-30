@@ -9,8 +9,14 @@ export const siteConfig = {
     github: "https://github.com/Malcolm-Hall",
     twitter: undefined,
   },
-  aboutMe: "I’m a full-stack software developer with a strong foundation in problem solving and a pragmatic, delivery focused mindset. I hold a first class degree in Physics and Mathematics from Durham University, where programming became a core part of my work long before it became my career. For the past four years, I’ve worked professionally as a consultant developer, building and modernising enterprise web applications and APIs in financial services environments. I enjoy turning real business requirements into reliable, well-designed software.",
-  skills: ["TypeScript", "React", "Angular", "Java", "Kotlin", "SpringBoot", "Node.js", "Python", "AWS", "Docker"],
+  aboutMe: "I’m a full-stack software developer with a strong foundation in problem solving and a pragmatic, delivery focused mindset. I hold a first class Masters of Science (MSci) degree from Durham University, where programming became a core part of my work long before it became my career. For the past four years, I’ve worked professionally as a consultant developer, building and modernising enterprise web applications and APIs in financial services environments. I enjoy turning real business requirements into reliable, well-designed software.",
+  skills: [
+    "TypeScript", "JavaScript", "React", "Angular",
+    "Java", "Kotlin", "SpringBoot", 
+    "MongoDB", "IBM DB2", "PostgreSQL", 
+    "Git", "GitHub", "Docker", "Azure", "CI/CD", "Bash",
+    "Python", "C++"
+  ],
   projects: [
     {
       name: "Chess",
@@ -29,14 +35,16 @@ export const siteConfig = {
       bullets: [
         "[TODO] Bullets here"
       ],
+      skills: ["TypeScript", "React", "Angular", "Java", "Kotlin", "SpringBoot", "MongoDB", "IBM DB2", "PostgreSQL", "Docker", "Azure"],
     },
     {
-      company: "Durham Universitu",
+      company: "Durham University",
       title: "Summer Studentship",
       dateRange: "Jun - Sep 2019",
       bullets: [
         "[TODO] Bullets here"
       ],
+      skills: ["Python", "PyQt5"],
     }
   ],
   education: [
@@ -47,6 +55,16 @@ export const siteConfig = {
       achievements: [
         "[TODO] Acheivements here"
       ],
+      skills: ["Python", "C++"],
     }
   ],
+  certificates: [
+    {
+      name: "Oracle Certified Associate, Java SE 8 Programmer",
+      organisation: "Oracle",
+      issueDate: "Aug 2024",
+      skills: ["Java"],
+      link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=9CBC05F16D9A21701283052ED704AD6ABE5CF18F393040508E3FE172A2873003"
+    }
+  ]
 };
