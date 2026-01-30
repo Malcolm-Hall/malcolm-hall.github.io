@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Malcolm Hall",
   title: "Full Stack Software Engineer",
   description: "Portfolio website of Malcolm Hall",
-  accentColor: "#1d4ed8",
+  accentColor: "#117efa",
   social: {
     email: "malcolm.r.hall@outlook.com",
     linkedin: "https://www.linkedin.com/in/malcolm-hall-1b6761224",
