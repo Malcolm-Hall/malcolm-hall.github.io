@@ -19,6 +19,14 @@ export const siteConfig = {
   ],
   projects: [
     {
+      name: "Portfolio Website",
+      description: "My developer portfolio website.",
+      liveLink: "https://malcolm-hall.github.io",
+      repoLink: "https://github.com/Malcolm-Hall/malcolm-hall.github.io",
+      image: "portfolio-website.png",
+      skills: ["TypeScript", "Astro", "TailwindCSS"]
+    },
+    {
       name: "Chess",
       description:
         "A playable game of chess with support for move validation and loading positions using standard FEN notation.",
