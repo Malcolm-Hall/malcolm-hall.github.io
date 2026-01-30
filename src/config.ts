@@ -33,7 +33,10 @@ export const siteConfig = {
       title: "Software Developer (Intermediate)",
       dateRange: "2021 - 2025",
       bullets: [
-        "[TODO] Bullets here"
+        "Consultant software developer embedded in client agile teams within the financial services sector",
+        "Designed, built, and modernised enterprise web applications, REST APIs, and data processing systems",
+        "Delivered features end to end, from requirements and planning through development, testing, and production release, working closely with engineers and business stakeholders",
+        "Improved performance, reliability, and maintainability of critical systems through optimisation and modernisation work",
       ],
       skills: ["TypeScript", "React", "Angular", "Java", "Kotlin", "SpringBoot", "MongoDB", "IBM DB2", "PostgreSQL", "Docker", "Azure"],
     },
@@ -42,7 +45,9 @@ export const siteConfig = {
       title: "Summer Studentship",
       dateRange: "Jun - Sep 2019",
       bullets: [
-        "[TODO] Bullets here"
+        "Built a Python-based particle simulation to model molecular behaviour at solid-liquid interfaces",
+        "Architected the core physics engine and data model underpinning the simulation",
+        "Delivered a desktop application by designing and implementing a PyQt-based GUI",
       ],
       skills: ["Python", "PyQt5"],
     }
@@ -50,12 +55,13 @@ export const siteConfig = {
   education: [
     {
       school: "Durham University",
-      degree: "Masters of Science - Physics & Math",
+      degree: "Master in Science (MSci)",
       dateRange: "2017 - 2021",
       achievements: [
-        "[TODO] Acheivements here"
+        "Applied Python extensively for scientific data collection, analysis, and visualisation across laboratory and coursework modules",
+        "Final year project: extended the Herwig 7 C++ simulation framework to model particle interactions and analyse large scale collider simulations, running millions of events on a compute cluster",
       ],
-      skills: ["Python", "C++"],
+      skills: ["Python", "C++", "Matplotlib", "NumPy",],
     }
   ],
   certificates: [
