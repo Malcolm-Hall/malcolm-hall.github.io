@@ -93,6 +93,87 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       <p class="text-base sm:text-lg text-gray-600 leading-relaxed pr-12 sm:pr-14 md:pr-16">
                         {project.description}
                       </p>
+                      {project.items && project.items.length > 0 && (
+                        <ul class="px-6">
+                          {project.items.map((item) => (
+                            <li class="py-2 list-disc">
+                              <h4 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                                {item.name}
+                              </h4>
+                              <>
+                                {(item.liveLink || item.repoLink) && (
+                                  <div class="flex gap-4 py-2">
+                                    {item.liveLink && (
+                                      <a
+                                        href={item.liveLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="View Live"
+                                        class="transition-colors duration-300 hover:text-[var(--accent-color)] flex gap-1 "
+                                      >
+                                        View Live
+                                        <span class="inline-block">
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            class="inline-block h-4 w-4"
+                                            aria-hidden="true"
+                                          >
+                                            <path
+                                              fill-rule="evenodd"
+                                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                              clip-rule="evenodd"
+                                            />
+                                          </svg>
+                                        </span>
+                                      </a>
+                                    )}
+                                    {item.repoLink && (
+                                      <a
+                                        href={item.repoLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="View Code"
+                                        class="transition-colors duration-300 hover:text-[var(--accent-color)] flex gap-1 "
+                                      >
+                                        View Code
+                                        <span class="inline-block">
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="h-4 w-4 inline-block"
+                                          >
+                                            <path
+                                              stroke="none"
+                                              d="M0 0h24v24H0z"
+                                              fill="none"
+                                            />
+                                            <path d="M7 8l-4 4l4 4" />
+                                            <path d="M17 8l4 4l-4 4" />
+                                            <path d="M14 4l-4 16" />
+                                          </svg>
+                                        </span>
+                                      </a>
+                                    )}
+                                  </div>
+                                )}
+                              </>
+
+                              <p class="text-base sm:text-lg text-gray-600 leading-relaxed pr-12 sm:pr-14 md:pr-16">
+                                {item.description}
+                              </p>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                       {project.skills && project.skills.length > 0 && (
                         <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
                           {project.skills.map((skill) => (
@@ -108,7 +189,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       decoding="async"
                       class="aspect-video w-full h-full object-contain rounded border-2 border-slate-200/10 transition sm:order-1 sm:col-span-2 sm:translate-y-1"
                       style="color:transparent"
-                      src={`/${project.image}`}
+                      src={`${project.image}`}
                     />
                   </div>
                 </li>

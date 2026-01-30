@@ -19,6 +19,44 @@ export const siteConfig = {
   ],
   projects: [
     {
+      name: "Financial Calculators Suite",
+      description: "A collection of financial calculators covering investment growth, annuity terms, coverage shortfall, and more. The calculators can be used standalone or embedded as a widget into Wordpress sites using the plugin system.",
+      image: "financial-calculators.png",
+      items: [
+        {
+          name: "Savings Calculator",
+          description: "Calculate various scenarios for investments with a fixed interest rate including the expected return and how the investment will grow based on monthly contributions, interest rate, initial lump sum, or investment term.",
+          liveLink: "https://malcolm-hall.github.io/savings-calculator",
+          repoLink: "https://github.com/Malcolm-Hall/savings-calculator",
+        },
+        {
+          name: "Annuity Calculator",
+          description: "Calculate various scenarios for fixed annuities including expected monthly income, annuity term or the requirements to meet your target income.",
+          liveLink: "https://malcolm-hall.github.io/annuity-calculator",
+          repoLink: "https://github.com/Malcolm-Hall/annuity-calculator",
+        },
+        {
+          name: "Coverage Calculator",
+          description: "Calculate the required life, disibility, and critical illness cover based on your personal situation and determine the shortfall of your existing coverage.",
+          liveLink: "https://malcolm-hall.github.io/coverage-calculator/",
+          repoLink: "https://github.com/Malcolm-Hall/coverage-calculator/",
+        },
+        {
+          name: "Living Annuity Calculator",
+          description: "Calculate the term of your living annuity payments based on your retirement age and income requirements.",
+          liveLink: "https://malcolm-hall.github.io/living-annuity-calculator",
+          repoLink: "https://github.com/Malcolm-Hall/living-annuity-calculator",
+        },
+        {
+          name: "Investment Fees Calculator",
+          description: "Compare investments with different Effective Annual Costs (EAC) and view the growth over the investment term.",
+          liveLink: "https://malcolm-hall.github.io/saving-fees-calculator",
+          repoLink: "https://github.com/Malcolm-Hall/saving-fees-calculator",
+        },
+      ],
+      skills: ["JavaScript", "HTML", "CSS", "Chart.js"]
+    },
+    {
       name: "Portfolio Website",
       description: "My developer portfolio website.",
       liveLink: "https://malcolm-hall.github.io",
