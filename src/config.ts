@@ -30,7 +30,6 @@ export const siteConfig = {
       name: "Chess",
       description:
         "A playable game of chess with support for move validation and loading positions using standard FEN notation.",
-      liveLink: "https://github.com/Malcolm-Hall/chess",
       repoLink: "https://github.com/Malcolm-Hall/chess",
       image: "chess_starting_position.png",
       skills: ["Python", "Pyglet"],
@@ -38,7 +37,6 @@ export const siteConfig = {
     {
       name: "Enigma Machine",
       description: "An Enigma machine written in C++, and interfaced from within Python.",
-      liveLink: "https://github.com/Malcolm-Hall/enigmaMachine",
       repoLink: "https://github.com/Malcolm-Hall/enigmaMachine",
       image: "Enigma_Example.png",
       skills: ["Python", "C++", "PyBind11", "Tkinter"]
