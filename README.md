@@ -1,6 +1,6 @@
 # Malcolm Hall Dev Portfolio
 
-To view the live website go to [malcolm-hall.github.io][https://malcolm-hall.github.io].
+To view the live website go to [malcolm-hall.github.io](https://malcolm-hall.github.i0).
 
 ## Built With
 
@@ -8,32 +8,6 @@ To view the live website go to [malcolm-hall.github.io][https://malcolm-hall.git
 - **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[Tabler Icons](https://tabler.io/icons)** - Free and open source icons
 - **TypeScript** - For type-safe configuration
-
-## Project Structure
-
-```
-devportfolio/
-├── public/
-│   └── favicon.svg          # Site favicon
-├── src/
-│   ├── components/          # Astro components
-│   │   ├── About.astro      # About section
-│   │   ├── Education.astro  # Education section
-│   │   ├── Experience.astro # Work experience section
-│   │   ├── Footer.astro     # Site footer
-│   │   ├── Header.astro     # Navigation header
-│   │   ├── Hero.astro       # Hero/intro section
-│   │   └── Projects.astro   # Projects showcase
-│   ├── pages/
-│   │   └── index.astro      # Main page layout
-│   ├── styles/
-│   │   └── global.css       # Global styles
-│   └── config.ts            # Site configuration
-├── astro.config.mjs         # Astro configuration
-├── package.json             # Project dependencies
-├── tailwind.config.js       # Tailwind configuration
-└── tsconfig.json            # TypeScript configuration
-```
 
 ## Local Development
 
