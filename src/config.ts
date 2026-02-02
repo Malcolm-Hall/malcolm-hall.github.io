@@ -9,7 +9,7 @@ export const siteConfig = {
     github: "https://github.com/Malcolm-Hall",
     twitter: undefined,
   },
-  aboutMe: "I’m a full-stack software developer with a strong foundation in problem solving and a pragmatic, delivery focused mindset. I hold a first class Masters in Science degree from Durham University, where programming became a core part of my work long before it became my career. For the past four years I’ve worked professionally as a software developer, building and modernising enterprise web applications and APIs in financial services environments, turning real business requirements into reliable, well-designed software.",
+  aboutMe: "I’m a full-stack software developer with a strong foundation in problem solving and a pragmatic, delivery focused mindset. I hold a first class Masters in Science degree from Durham University, where programming became a core part of my work long before it became my career. For the past four years I’ve worked professionally in the UK as a software developer, building and modernising enterprise web applications and APIs in financial services environments, turning real business requirements into reliable, well-designed software.",
   skills: [
     "TypeScript", "JavaScript", "React", "Angular",
     "Java", "Kotlin", "SpringBoot", 
