@@ -5,7 +5,7 @@ export const siteConfig = {
   accentColor: "#117efa",
   social: {
     email: "malcolm.r.hall@outlook.com",
-    linkedin: "https://www.linkedin.com/in/malcolm-hall-1b6761224",
+    linkedin: "https://www.linkedin.com/in/malcolm-r-hall",
     github: "https://github.com/Malcolm-Hall",
     twitter: undefined,
   },
